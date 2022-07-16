@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="陶然">
+    
+    <title>
+        
+            文件读写函数 |
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                My blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">文件读写函数</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">陶然</span>
+                        
+                            <span class="author-label">挥兹一觞，陶然自乐</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-07-16 16:43:44</span>
+        <span class="mobile">2022-07-16 16:43</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/C/">C</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>5 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>C语言中关于文件读写的函数</p>
+<span id="more"></span>
+
+<h1 id="字符读写"><a href="#字符读写" class="headerlink" title="字符读写"></a>字符读写</h1><h2 id="字符写入文件函数-fputc"><a href="#字符写入文件函数-fputc" class="headerlink" title="字符写入文件函数 fputc"></a>字符写入文件函数 fputc</h2><p>fputc函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fputc</span><span class="params">( <span class="type">int</span> c, FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：<br>    其中，c是要写入的字节，它虽被定义为整型，但只使用最低位的一字节，fp是文件指针。</p>
+<p>fputc的功能:<br>    将字节c输出至fp所指向的文件。如果成功，位置指针自动后 移1字节的位置，并且返回c；否则返回EOF。</p>
+<h2 id="从文件中读取字符-fgetc"><a href="#从文件中读取字符-fgetc" class="headerlink" title="从文件中读取字符 fgetc"></a>从文件中读取字符 fgetc</h2><p>fgetc函数的原型如下:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fgetc</span><span class="params">( FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：<br>    其中fp为文件指针。</p>
+<p>fgetc的功能:<br>    从fp所指向的文件中读取一个字节，如果成功则返回读取的字节，位置指针自动后移1字节的位置；否则返回EOF。</p>
+<h1 id="字符串的读写"><a href="#字符串的读写" class="headerlink" title="字符串的读写"></a>字符串的读写</h1><h2 id="字符串写入文件函数-fputs"><a href="#字符串写入文件函数-fputs" class="headerlink" title="字符串写入文件函数 fputs"></a>字符串写入文件函数 fputs</h2><p>fputs函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fputs</span><span class="params">( <span class="type">const</span> <span class="type">char</span> *s, FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：<br>    其中，s是要写入的字符串，fp是文件指针。</p>
+<p>fputs的功能：<br>    将字符串s输出至fp所指向的文件（不含’\0’）。如果成功，位置指针自动后移，函数返回一个非负整数；否则返回EOF。</p>
+<h2 id="从文件中读取字符-fgets"><a href="#从文件中读取字符-fgets" class="headerlink" title="从文件中读取字符 fgets"></a>从文件中读取字符 fgets</h2><p>fgets函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *<span class="title function_">fgets</span><span class="params">( <span class="type">char</span> *s， <span class="type">int</span> n， FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：<br>    其中，s指向待赋值字符串的首地址，n是控制读取个数的参数，fp为文件指针。 </p>
+<p>fgets的功能：<br>    从位置指针开始读取 一行或n-1个字符，并存入s，存储时自动在字符串结尾加上’\0’。如果函数执行成功，位置指针自动后移，<br>并返回s的值，否则返回NULL。</p>
+<h1 id="块数据读写"><a href="#块数据读写" class="headerlink" title="块数据读写"></a>块数据读写</h1><p>所谓块读写，就是读写n块以m个字节为单位的二进制数据，可以是一个字符（一个字符为一字节，则块大小为1×1),可以是一个长度为n字符串（块大小1×n），可以是长度为n的整型数组（整型以4字节算，块大小4×n），也可以是结构体等任意数据类型，并没有什么限制。</p>
+<h2 id="向文件中写入块数据fwrite"><a href="#向文件中写入块数据fwrite" class="headerlink" title="向文件中写入块数据fwrite"></a>向文件中写入块数据fwrite</h2><p>fwrite函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> <span class="title function_">fwrite</span> <span class="params">( <span class="type">void</span> * ptr, <span class="type">size_t</span> size, <span class="type">size_t</span> count, FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：<br>    ptr：指向保存读写数据的内存的指针，它可以指向数组、变量、结构体等。<br>    size：表示每个数据块的字节数。<br>    count：表示要读写的数据块的块数。<br>    fp：表示文件指针。<br>    理论上，每次读写 size*count 个字节的数据。</p>
+<p>fwrite的功能：<br>    从内存中的ptr指向的地址开始，将连续n*size字节的内容写入fp文件中。该函数的返回值是实际写入的数据块个数。</p>
+<h2 id="从文件中读取块数据fread"><a href="#从文件中读取块数据fread" class="headerlink" title="从文件中读取块数据fread"></a>从文件中读取块数据fread</h2><p>fread函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> <span class="title function_">fread</span> <span class="params">( <span class="type">void</span> *ptr, <span class="type">size_t</span> size, <span class="type">size_t</span> count, FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
+<p>&#x2F;&#x2F;size_t 是在 stddef.h 头文件中使用 typedef 定义的数据类型，表示无符号整数，也即非负数，常用来表示数量。</p>
+<p>参数说明：<br>    见[[文件读写函数#^ece6a5|fwrite]]</p>
+<p>fread的功能：<br>    从文件fp中，连续读取n*size字节的内容，并存入ptr指向的内存空间。该函数的返回值是实际读入的数据块个数。</p>
+<h1 id="格式化读写"><a href="#格式化读写" class="headerlink" title="格式化读写"></a>格式化读写</h1><p>格式化读写函数包括fprintf和fscanf两个函数，它们只用于文本文件的读写，不能用于二进制文件的读写。文本文件与二进制文件的区别下面注意点中有介绍。</p>
+<h2 id="格式化写入文件fprintf"><a href="#格式化写入文件fprintf" class="headerlink" title="格式化写入文件fprintf"></a>格式化写入文件fprintf</h2><p>fprintf函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fprintf</span><span class="params">( FILE *fp, <span class="type">const</span> <span class="type">char</span>* format, 输出参数<span class="number">1</span>, 输出参数<span class="number">2</span>… )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明:<br>    其中，fp是文件指针，format为格式控制字符串，输出参数列表为待输出的数据。 </p>
+<p>fprintf的功能：<br>    根据指定的格式（format参数）发送数据（输出参数）到文件fp。<br>例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE *fp;</span><br><span class="line">    fp = fopen(<span class="string">&quot;a.txt&quot;</span>,<span class="string">&quot;w&quot;</span>);</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="type">double</span> f = <span class="number">11.11</span>;</span><br><span class="line">    <span class="built_in">fprintf</span>(fp, <span class="string">&quot;%d%lf&quot;</span>, a, f);</span><br><span class="line">    fclose(fp);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：fprintf()按格式输入到流，其用法和printf()相同，不过不是写到控制台，而是写到流罢了。注意的是<br>返回值为此次操作写入到文件的字节数。如int c &#x3D;fprintf(fp, “%s %s %d %f”, str1,str2, a, b) ;<br>假设str1：10字节；str2：10字节；a：2字节；b：8字节；则最终c为33，因为写入时不同的数据间自动加入一个空格。</p>
+<h2 id="从文件中格式化读取fscanf"><a href="#从文件中格式化读取fscanf" class="headerlink" title="从文件中格式化读取fscanf"></a>从文件中格式化读取fscanf</h2><p>fscanf函数的原型如下：</p>
+<pre><code>int fscanf( FILE *fp,  const char* format, 地址1，地址2… );
+</code></pre>
+<p>函数说明：<br>    其中，fp是文件指针，format为格式控制字符串，地址列表为输入数据的存放地址。 </p>
+<p>fscanf的功能：<br>    根据指定的格式（format参数）从文件fp中读取数据至内存（地址）。<br>例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line">  </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    FILE *fp;   </span><br><span class="line">    fp = fopen(<span class="string">&quot;a.txt&quot;</span>,<span class="string">&quot;r&quot;</span>); <span class="comment">//需要创建a.txt文件，然后写入两个数据，空格隔开</span></span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> f=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">fscanf</span>( fp, <span class="string">&quot;%d%lf&quot;</span>, &amp;i, &amp;f );</span><br><span class="line">    fclose(fp);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n%lf\n&quot;</span>,i,f);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：文件读写函数</li>
+        <li>Post author：陶然</li>
+        <li>Create time：2022-07-16 16:43:44</li>
+        <li>
+            Post link：https://18sy.github.io/2022/07/16/文件读写函数/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">#C语言</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/07/16/PTA-C%E8%AF%AD%E8%A8%80/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">PTA-C语言</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">陶然</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E8%AF%BB%E5%86%99"><span class="nav-number">1.</span> <span class="nav-text">字符读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0-fputc"><span class="nav-number">1.1.</span> <span class="nav-text">字符写入文件函数 fputc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6-fgetc"><span class="nav-number">1.2.</span> <span class="nav-text">从文件中读取字符 fgetc</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%AF%BB%E5%86%99"><span class="nav-number">2.</span> <span class="nav-text">字符串的读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E5%87%BD%E6%95%B0-fputs"><span class="nav-number">2.1.</span> <span class="nav-text">字符串写入文件函数 fputs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%AD%97%E7%AC%A6-fgets"><span class="nav-number">2.2.</span> <span class="nav-text">从文件中读取字符 fgets</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%97%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%86%99"><span class="nav-number">3.</span> <span class="nav-text">块数据读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E6%96%87%E4%BB%B6%E4%B8%AD%E5%86%99%E5%85%A5%E5%9D%97%E6%95%B0%E6%8D%AEfwrite"><span class="nav-number">3.1.</span> <span class="nav-text">向文件中写入块数据fwrite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%9D%97%E6%95%B0%E6%8D%AEfread"><span class="nav-number">3.2.</span> <span class="nav-text">从文件中读取块数据fread</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%AF%BB%E5%86%99"><span class="nav-number">4.</span> <span class="nav-text">格式化读写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6fprintf"><span class="nav-number">4.1.</span> <span class="nav-text">格式化写入文件fprintf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%AF%BB%E5%8F%96fscanf"><span class="nav-number">4.2.</span> <span class="nav-text">从文件中格式化读取fscanf</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
