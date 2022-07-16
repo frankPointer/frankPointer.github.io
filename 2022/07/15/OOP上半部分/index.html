@@ -184,17 +184,24 @@
         <span class="mobile">2022-07-15 15:30</span>
     </span>
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/java/">java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
     
         <span class="article-tags article-meta-item">
             <i class="fas fa-tags"></i>&nbsp;
             <ul>
                 
                     <li>
-                        <a href="/tags/markdown/">markdown</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/OOP/">OOP</a>&nbsp;
+                        <a href="/tags/OOP/">OOP</a>&nbsp;
                     </li>
                 
                     <li>
@@ -229,7 +236,10 @@
         
 
         <div class="article-content markdown-body">
-            <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p><strong>Dogs</strong></p>
+            <p>暑假学习OOP</p>
+<span id="more"></span>
+
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p><strong>Dogs</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.google.bean;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> lombok.Getter;  </span><br><span class="line"><span class="keyword">import</span> lombok.Setter;  </span><br><span class="line"><span class="keyword">import</span> lombok.ToString;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 狗的特性和共性  </span></span><br><span class="line"><span class="comment">// 类当中的变量和方法都称为属性  </span></span><br><span class="line">  </span><br><span class="line"><span class="comment">// @Getter 和 @Setter 写在类上面对于所有变量都行  </span></span><br><span class="line"><span class="comment">// 也可以之对于单独的一个变量使用     @Getter @Setter private String name;@Getter  </span></span><br><span class="line"><span class="meta">@Setter</span>  </span><br><span class="line"><span class="meta">@ToString</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Dogs</span> &#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 成员变量：它们组成构成了类  </span></span><br><span class="line">    <span class="comment">// 狗的名字  </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// public 共有的,用户可以为所欲为  </span></span><br><span class="line">    <span class="comment">// private 私有的，用户不能为所欲为  </span></span><br><span class="line">    <span class="keyword">private</span> String name;  </span><br><span class="line">    <span class="comment">// 狗种类  </span></span><br><span class="line">    <span class="keyword">private</span> String variety;  </span><br><span class="line">    <span class="comment">// 狗年龄  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;  </span><br><span class="line">    <span class="comment">// 狗的食物  </span></span><br><span class="line">    <span class="keyword">private</span> String food;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 静态变量 所属于类  </span></span><br><span class="line">    <span class="comment">// 使用 private 封装后对于静态变量只需要一个 Getter 函数即可  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">String</span> <span class="variable">plot</span> <span class="operator">=</span> <span class="string">&quot;马古岗联合国&quot;</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 构造方法  </span></span><br><span class="line">    <span class="comment">// 无参构造器  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Dogs</span><span class="params">()</span> &#123;  </span><br><span class="line">  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 自己写的一个构造器，这个时候需要写一个 无参构造器（上面的那个函数）  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Dogs</span><span class="params">(String name, String variety, <span class="type">int</span> age, String food)</span> &#123;  </span><br><span class="line">        <span class="built_in">this</span>.name = name;  </span><br><span class="line">        <span class="built_in">this</span>.variety = variety;  </span><br><span class="line">        <span class="built_in">this</span>.age = age;  </span><br><span class="line">        <span class="built_in">this</span>.food = food;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Dogs</span><span class="params">(String name)</span> &#123;  </span><br><span class="line">        <span class="built_in">this</span>.name = name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 设计的一个函数，保证用户能输入age的值，但是不能乱搞，所以 一个get、一个set 函数  </span></span><br><span class="line">    <span class="comment">// 这种称为OOP的封装  </span></span><br><span class="line">    <span class="comment">// 安装 lombok后使用上面的注释即可  </span></span><br><span class="line">    <span class="comment">// 对于特殊的你可以单独写 -&gt; 方法的重载  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;  </span><br><span class="line">        <span class="keyword">if</span> (age &lt;= <span class="number">0</span> || age &gt;= <span class="number">100</span>) &#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;您的输入不合法，已经将年龄清零&quot;</span>);  </span><br><span class="line">            <span class="built_in">this</span>.age = <span class="number">0</span>;  </span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">            <span class="built_in">this</span>.age = age;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 狗的行为  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span> &#123;  </span><br><span class="line">        System.out.println(name + <span class="string">&quot;在吃饭，吃的...&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span> &#123;  </span><br><span class="line">        System.out.println(name + <span class="string">&quot;狗睡觉&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sick</span><span class="params">()</span> &#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;狗生病&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 对于 静态变量 plot 的获取  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getPlot</span><span class="params">()</span> &#123;  </span><br><span class="line">        <span class="keyword">return</span> plot;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 静态方法 同样也属于类  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">vaccination</span><span class="params">()</span> &#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;所有的狗都需要来卫生院打狂犬疫苗&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Application</strong></p>
@@ -264,10 +274,6 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/markdown/">#markdown</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item">
                         <a href="/tags/OOP/">#OOP</a>&nbsp;
                     </li>
                 
@@ -281,21 +287,21 @@
         
             <div class="article-nav">
                 
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2022/07/03/hello-world/"
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/07/16/PTA-C%E8%AF%AD%E8%A8%80/"
                         >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">Hello World</span>
-                                <span class="post-nav-item">Next posts</span>
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
                             </span>
-                            <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">PTA-C语言</span>
+                                <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
                     </div>
+                
                 
             </div>
         

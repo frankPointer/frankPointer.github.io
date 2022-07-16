@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="陶然">
+    
+    <title>
+        
+            PTA-C语言 |
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                My blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">PTA-C语言</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">陶然</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-07-16 09:30:13</span>
+        <span class="mobile">2022-07-16 09:30</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/PTA/">PTA</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/PTA/C/">C</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/PTA/">PTA</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>15 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>大一在PTA写的题目</p>
+<span id="more"></span>
+
+<h1 id="题目集1"><a href="#题目集1" class="headerlink" title="题目集1"></a>题目集1</h1><h2 id="题目：1-戍边英雄"><a href="#题目：1-戍边英雄" class="headerlink" title="题目：1 戍边英雄"></a>题目：1 戍边英雄</h2><p>去年六月</p>
+<p>远在我国西北边陲广袤的大地上</p>
+<p>五位戍边英雄挺身而出</p>
+<p>用伟岸的身躯守护着</p>
+<p>中华大地上的每一寸“肌肤”</p>
+<p><img src="https://images.ptausercontent.com/28db6f27-c8a9-4663-827e-f88ee401a06c.jpg" alt="英雄.jpg"></p>
+<p>他们分别是<strong>陈红军、王焯冉、祁发宝、肖思远、陈祥榕</strong></p>
+<p>让我们用编程的形式向这些英雄致敬！</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">***********************</span><br><span class="line">* Zhi Jing Ying Xiong *</span><br><span class="line">*     Chen Hongjun    *</span><br><span class="line">*     Wang Zhuoran    *</span><br><span class="line">*       Qi Fabao      *</span><br><span class="line">*     Xiao Siyuan     *</span><br><span class="line">*     Chen Xiangrong  *</span><br><span class="line">***********************</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;***********************\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;* Zhi Jing Ying Xiong *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*     Chen Hongjun    *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*     Wang Zhuoran    *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*       Qi Fabao      *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*     Xiao Siyuan     *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*     Chen Xiangrong  *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;***********************&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：2-Welcome-to-You"><a href="#题目：2-Welcome-to-You" class="headerlink" title="题目：2 Welcome to You!"></a>题目：2 Welcome to You!</h2><p>本题要求编写程序，输出一个短句“Welcome to You!”。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中输出短句“Welcome to You!”。</p>
+<h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Welcome to You!&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：3-输出倒三角图案"><a href="#题目：3-输出倒三角图案" class="headerlink" title="题目：3 输出倒三角图案"></a>题目：3 输出倒三角图案</h2><p>本题要求编写程序，输出指定的由“*”组成的倒三角图案。</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照下列格式输出由“*”组成的倒三角图案。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* * * *</span><br><span class="line"> * * *</span><br><span class="line">  * *</span><br><span class="line">   *</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;* * * *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot; * * *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;  * *\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;   *\n&quot;</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：4-打印菜单"><a href="#题目：4-打印菜单" class="headerlink" title="题目：4 打印菜单"></a>题目：4 打印菜单</h2><p>本题要求编写程序，在屏幕上打印5行菜单。</p>
+<h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>本题目没有输入。</p>
+<h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>按照下列格式打印菜单，每行显示一句。注意除了每行的换行不能有任何多余字符。</p>
+<p>[1] Select crisps</p>
+<p>[2] Select popcorn</p>
+<p>[3] Select chocolate</p>
+<p>[4] Select cola</p>
+<p>[0] Exit</p>
+<h3 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h3><h3 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[1] Select crisps</span><br><span class="line">[2] Select popcorn</span><br><span class="line">[3] Select chocolate</span><br><span class="line">[4] Select cola</span><br><span class="line">[0] Exit</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[1] Select crisps\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[2] Select popcorn\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[3] Select chocolate\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[4] Select cola\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[0] Exit\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：5-混合类型数据格式化输入"><a href="#题目：5-混合类型数据格式化输入" class="headerlink" title="题目：5 混合类型数据格式化输入"></a>题目：5 混合类型数据格式化输入</h2><p>本题要求编写程序，顺序读入浮点数1、整数、字符、浮点数2，再按照字符、整数、浮点数1、浮点数2的顺序输出。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中顺序给出浮点数1、整数、字符、浮点数2，其间以1个空格分隔。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按照字符、整数、浮点数1、浮点数2的顺序输出，其中浮点数保留小数点后2位。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.12 88 c 4.7</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c 88 2.12 4.70</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-4"><a href="#题解-4" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-4"><a href="#分析-4" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a;</span><br><span class="line">	<span class="type">char</span> b;</span><br><span class="line">	<span class="type">float</span> c, d;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%f %d %c %f&quot;</span>, &amp;c, &amp;a, &amp;b, &amp;d);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c %d %.2f %.2f\n&quot;</span>,b,a,c,d);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：6-计算摄氏温度"><a href="#题目：6-计算摄氏温度" class="headerlink" title="题目：6 计算摄氏温度"></a>题目：6 计算摄氏温度</h2><p>给定一个华氏温度F，本题要求编写程序，计算对应的摄氏温度C。计算公式：C&#x3D;5×(F−32)&#x2F;9。题目保证输入与输出均在整型范围内。</p>
+<h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出一个华氏温度。</p>
+<h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照格式“Celsius &#x3D; C”输出对应的摄氏温度C的整数值。</p>
+<h3 id="输入样例-2"><a href="#输入样例-2" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">150</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-2"><a href="#输出样例-2" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Celsius = 65</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-5"><a href="#题解-5" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-5"><a href="#分析-5" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">int</span> C, F;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;F);</span><br><span class="line">	C = <span class="number">5</span> * (F - <span class="number">32</span>) / <span class="number">9</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Celsius = %d&quot;</span>, C);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：7-整数算术运算"><a href="#题目：7-整数算术运算" class="headerlink" title="题目：7 整数算术运算"></a>题目：7 整数算术运算</h2><p>本题要求编写程序，计算并输出2个正整数的和、差、积、商与余数。题目保证输入和输出全部在整型范围内。</p>
+<h3 id="输入格式-4"><a href="#输入格式-4" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出2个正整数A和B。</p>
+<h3 id="输出格式-4"><a href="#输出格式-4" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在5行中按照格式“A 运算符 B &#x3D; 结果”顺序输出和、差、积、商与余数。</p>
+<h3 id="输入样例-3"><a href="#输入样例-3" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-3"><a href="#输出样例-3" class="headerlink" title="输出样例:"></a>输出样例:</h3><p>在这里给出相应的输出。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">5 + 3 = 8</span><br><span class="line">5 - 3 = 2</span><br><span class="line">5 * 3 = 15</span><br><span class="line">5 / 3 = 1</span><br><span class="line">5 % 3 = 2</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-6"><a href="#题解-6" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-6"><a href="#分析-6" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> A,B;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;A,&amp;B);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d + %d = %d\n&quot;</span>,A,B,A+B);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d - %d = %d\n&quot;</span>,A,B,A-B);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d * %d = %d\n&quot;</span>,A,B,A*B);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d / %d = %d\n&quot;</span>,A,B,A/B);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %% %d = %d&quot;</span>,A,B,A%B);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：8-计算火车运行时间"><a href="#题目：8-计算火车运行时间" class="headerlink" title="题目：8 计算火车运行时间"></a>题目：8 计算火车运行时间</h2><p>本题要求根据火车的出发时间和达到时间，编写程序计算整个旅途所用的时间。</p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出2个4位正整数，其间以空格分隔，分别表示火车的出发时间和到达时间。每个时间的格式为2位小时数（00-23）和2位分钟数（00-59），假设出发和到达在同一天内。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行输出该旅途所用的时间，格式为“hh:mm”，其中hh为2位小时数、mm为2位分钟数。</p>
+<h3 id="输入样例：-1"><a href="#输入样例：-1" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1201 1530</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-1"><a href="#输出样例：-1" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">03:29</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-7"><a href="#题解-7" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-7"><a href="#分析-7" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> x, y, a, b, c, e, h, m;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">	a = x / <span class="number">100</span>;</span><br><span class="line">	b = x % <span class="number">100</span>;</span><br><span class="line">	c = y / <span class="number">100</span>;</span><br><span class="line">	e = y % <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">if</span> (b &lt;= e)</span><br><span class="line">	&#123;</span><br><span class="line">		h = c - a;</span><br><span class="line">		m = e - b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		h = c - a - <span class="number">1</span>;</span><br><span class="line">		m = e - b + <span class="number">60</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%02d:%02d&quot;</span>, h, m);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="题目集2"><a href="#题目集2" class="headerlink" title="题目集2"></a>题目集2</h1><h2 id="题目-1-密码转换"><a href="#题目-1-密码转换" class="headerlink" title="题目:1 密码转换"></a>题目:1 密码转换</h2><p>输入一个大写字母，把它往后移动两个位置加密，即A变C，B变D，X变Z，Z变B</p>
+<h3 id="输入格式-5"><a href="#输入格式-5" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>一行，一个大写字母</p>
+<h3 id="输出格式-5"><a href="#输出格式-5" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>一行，一个大写字母</p>
+<h3 id="输入样例-4"><a href="#输入样例-4" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-4"><a href="#输出样例-4" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-8"><a href="#题解-8" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-8"><a href="#分析-8" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-8"><a href="#代码-8" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">char</span> a;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>, &amp;a);</span><br><span class="line">	<span class="keyword">if</span> (a == <span class="string">&#x27;Y&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (a == <span class="string">&#x27;Z&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;B&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, a + <span class="number">2</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：2-求圆锥体体积"><a href="#题目：2-求圆锥体体积" class="headerlink" title="题目：2 求圆锥体体积"></a>题目：2 求圆锥体体积</h2><p>编写程序，根据用户输入的圆锥底面半径r（整型）和高h（整型），计算圆锥体的体积。pi的取值为3.14159。 圆锥体体积的计算公式如下：</p>
+<p><img src="https://images.ptausercontent.com/21cfb1f9-1187-4063-8291-e99f554c2b5b.jpg" alt="圆锥体体积公式.jpg"></p>
+<h3 id="输入格式-6"><a href="#输入格式-6" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入半径r（整型）和高h（整型）。</p>
+<h3 id="输出格式-6"><a href="#输出格式-6" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出圆锥体体积，结果保留2位小数。</p>
+<h3 id="输入样例-5"><a href="#输入样例-5" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 15</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-5"><a href="#输出样例-5" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v=1570.79</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-9"><a href="#题解-9" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-9"><a href="#分析-9" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> r,h;</span><br><span class="line">    <span class="type">double</span> v;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;r,&amp;h);</span><br><span class="line">    v=PI*r*r*h/<span class="number">3</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;v=%.2lf&quot;</span>,v);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：3-组合一个新的整数"><a href="#题目：3-组合一个新的整数" class="headerlink" title="题目：3 组合一个新的整数"></a>题目：3 组合一个新的整数</h2><p>编写程序输入4个一位的非负整数，依次作为个、十、百、千位组合成一个新的整数，最后输出结果。</p>
+<h3 id="输入格式-7"><a href="#输入格式-7" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>在一行中输入4个一位非负整数，以空格分隔。</p>
+<h3 id="输出格式-7"><a href="#输出格式-7" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出组合成的新整数，最后换行。</p>
+<h3 id="输入样例-6"><a href="#输入样例-6" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 3 6 9</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-6"><a href="#输出样例-6" class="headerlink" title="输出样例:"></a>输出样例:</h3><p>在这里给出相应的输出。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9631</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-10"><a href="#题解-10" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-10"><a href="#分析-10" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-10"><a href="#代码-10" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a,b,c,d;</span><br><span class="line">    <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%u%u%u%u&quot;</span>,&amp;a,&amp;b,&amp;c,&amp;d);</span><br><span class="line">    sum=d;</span><br><span class="line">    sum=sum*<span class="number">10</span>+c;</span><br><span class="line">    sum=sum*<span class="number">10</span>+b;</span><br><span class="line">    sum=sum*<span class="number">10</span>+a;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：4-程序员"><a href="#题目：4-程序员" class="headerlink" title="题目：4 程序员"></a>题目：4 程序员</h2><p>二战后期，催生了世上第一台通用型计算机——“ENIAC”的开发。关于ENIAC，很少有人知道，ENIAC的诞生离不开6位女程序员。她们是Jean Bartik、Kathleen Antonelli、Ruth Teitelbaum、Frances Spence、Marlyn Meltzer和Betty Holberton，她们在ENIAC的发明过程中，负责给机器编程。这6位女程序员虽然都是数学系的顶尖毕业生, 但面对第一台通用型电脑，没人知道怎么下手，她们有的只是一叠资料和接线图。她们在这台大家伙上不断的研究调试，每天要费力的去拔各种缆线、托盘，有时甚至需要爬进检修管道检修故障，更换损坏的零件…. 最终她们还是完成了这项艰难的任务，编出了程序让机器运作。</p>
+<p>程序员是一群善于学习、进取心超强的人。他们总是喜欢学习、尝试新事物，求知欲望相当强。我们常常能在程序员的身上看到不竭的激情与满满的正能量。</p>
+<p>1024是2的十次方，二进制计数的基本计量单位之一，因此每年的10月24日被大家亲切称为程序员节。我们知道，二进制数系统中，每个0或1就是一个位(bit)，位是数据存储的最小单位。其中8bit就称为一个字节（Byte）,1024B&#x3D;1KB，1024 KB&#x3D;1MB，1024 MB&#x3D;1GB等等。</p>
+<p>请根据输入的KB数，输出位数。</p>
+<h3 id="输入格式-8"><a href="#输入格式-8" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>在一行中给出一个小于100的整数，表示KB数。</p>
+<h3 id="输出格式-8"><a href="#输出格式-8" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>输出二进制位数。</p>
+<h3 id="输入样例-7"><a href="#输入样例-7" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-7"><a href="#输出样例-7" class="headerlink" title="输出样例"></a>输出样例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">81920</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-11"><a href="#题解-11" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-11"><a href="#分析-11" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-11"><a href="#代码-11" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a*<span class="number">8</span>*<span class="number">1024</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：5-计算分段函数"><a href="#题目：5-计算分段函数" class="headerlink" title="题目：5 计算分段函数"></a>题目：5 计算分段函数</h2><p>本题目要求计算下列分段函数g(x)的值：</p>
+<img src="fenduanhanshu .png" alt="fenduanhanshu " style="zoom:120%;" />
+
+<h3 id="输入格式-9"><a href="#输入格式-9" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>在一行中输入实数x。</p>
+<h3 id="输出格式-9"><a href="#输出格式-9" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按“g(x) &#x3D; result”的格式输出，其中x与result都保留3位小数。</p>
+<h3 id="输入样例1"><a href="#输入样例1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><p>在这里给出一组输入。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">500</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例1"><a href="#输出样例1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><p>在这里给出相应的输出。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g(500.000) = 0.001</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入样例2"><a href="#输入样例2" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><p>在这里给出一组输入。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例2"><a href="#输出样例2" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><p>在这里给出相应的输出。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g(0.000) = 0.000</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-12"><a href="#题解-12" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-12"><a href="#分析-12" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-12"><a href="#代码-12" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> a,result;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>,&amp;a);</span><br><span class="line">    <span class="keyword">if</span>(a==<span class="number">0</span>) &#123;</span><br><span class="line">        result=a;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;g(%.3lf) = %.3lf&quot;</span>,a,result);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result=<span class="number">1</span>/a/<span class="number">2</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;g(%.3lf) = %.3lf&quot;</span>,a,result);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：6-ASCII码实战"><a href="#题目：6-ASCII码实战" class="headerlink" title="题目：6 ASCII码实战"></a>题目：6 ASCII码实战</h2><p>给出一系列字符，有大小写英文字母和其他一些字符（仅涉及ASCII打印字符，即ASCII码值&gt;&#x3D;32），现在想让你鉴别以下这些字符。如果是英文字母则输出其ASCII码值，否则输出”illegal”（不包含引号）。</p>
+<h3 id="输入格式-10"><a href="#输入格式-10" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>第一行一个整数N (0 &lt;&#x3D; N &lt;&#x3D; 1000000)，表示接下来会有多少个字符。<br>之后N行，每行一个字符。</p>
+<h3 id="输出格式-10"><a href="#输出格式-10" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对于每个字符，如果是大小写英文字母，则输出其ASCII码值，否则输出”illegal”（不包含引号）</p>
+<h3 id="输入样例-8"><a href="#输入样例-8" class="headerlink" title="输入样例:"></a>输入样例:</h3><p>在这里给出一组输入。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">A</span><br><span class="line">b</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-8"><a href="#输出样例-8" class="headerlink" title="输出样例:"></a>输出样例:</h3><p>在这里给出相应的输出。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">65</span><br><span class="line">98</span><br><span class="line">illegal</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-13"><a href="#题解-13" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-13"><a href="#分析-13" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-13"><a href="#代码-13" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> maxn 1000000</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i, n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="type">char</span> s[maxn];</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>, &amp;s[i]);</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;Z&#x27;</span> || s[i] &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, s[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;illegal\n&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：7-求整数均值"><a href="#题目：7-求整数均值" class="headerlink" title="题目：7 求整数均值"></a>题目：7 求整数均值</h2><p>本题要求编写程序，计算4个整数的和与平均值。题目保证输入与输出均在整型范围内。</p>
+<h3 id="输入格式-11"><a href="#输入格式-11" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中给出4个整数，其间以空格分隔。</p>
+<h3 id="输出格式-11"><a href="#输出格式-11" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按照格式“Sum &#x3D; 和; Average &#x3D; 平均值”顺序输出和与平均值，其中平均值精确到小数点后一位。</p>
+<h3 id="输入样例-9"><a href="#输入样例-9" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例-9"><a href="#输出样例-9" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sum = 10; Average = 2.5</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-14"><a href="#题解-14" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-14"><a href="#分析-14" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-14"><a href="#代码-14" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a, b, c, d;</span><br><span class="line">    <span class="type">int</span> Sum;</span><br><span class="line">    <span class="type">double</span> Anverage;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;a, &amp;b, &amp;c, &amp;d);</span><br><span class="line">    Sum = a + b + c + d;</span><br><span class="line">    Anverage = ((<span class="type">double</span>)(a + b + c + d)) / <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Sum = %d; Average = %.1lf&quot;</span>, Sum, Anverage);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：8-坚持的力量"><a href="#题目：8-坚持的力量" class="headerlink" title="题目：8  坚持的力量"></a>题目：8  坚持的力量</h2><p>本题目要求计算坚持努力后达到的能力值，以第一天的能力值initial为基数，能力值相比前一天提高的值factor就是努力参数，坚持天数为day，让我们一起来看看坚持的力量。</p>
+<p>计算公式为result&#x3D;initial×(1+factor)^day，其中result为坚持努力后达到的能力值，initial是能力的初始值，factor是努力参数，day是坚持天数。</p>
+<h3 id="输入格式-12"><a href="#输入格式-12" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入在一行中顺序给出一个正实数initial、一个实数factor和一个正整数day，以空格分隔。</p>
+<h3 id="输出格式-12"><a href="#输出格式-12" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>在一行中按“result &#x3D; 能力值”的格式输出，其中能力值保留两位小数。请注意等号的左右各有一个空格。</p>
+<h3 id="输入样例1-1"><a href="#输入样例1-1" class="headerlink" title="输入样例1:"></a>输入样例1:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.0 0.01 365</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例1-1"><a href="#输出样例1-1" class="headerlink" title="输出样例1:"></a>输出样例1:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = 37.78</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入样例2-1"><a href="#输入样例2-1" class="headerlink" title="输入样例2:"></a>输入样例2:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.0 -0.01 365</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例2-1"><a href="#输出样例2-1" class="headerlink" title="输出样例2:"></a>输出样例2:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = 0.03</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-15"><a href="#题解-15" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-15"><a href="#分析-15" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-15"><a href="#代码-15" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> initial, result,factor;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> day;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf %u&quot;</span>, &amp;initial, &amp;factor, &amp;day);</span><br><span class="line">    result = initial;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; day; i++) &#123;</span><br><span class="line">        result = result*(<span class="number">1</span> + factor);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;result = %.2lf&quot;</span>, result);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：9-油桶数"><a href="#题目：9-油桶数" class="headerlink" title="题目：9 油桶数"></a>题目：9 油桶数</h2><p>工人师傅将油桶码成如下图所示的梯形，数了数底层的油桶数和层数，就知道有多少油桶了。你知道他是怎么算的吗？</p>
+<p><img src="https://images.ptausercontent.com/344"></p>
+<h4 id="输入格式-13"><a href="#输入格式-13" class="headerlink" title="输入格式"></a>输入格式</h4><blockquote>
+<p>底层油桶数 a 和层数 b</p>
+</blockquote>
+<h4 id="输出格式-13"><a href="#输出格式-13" class="headerlink" title="输出格式"></a>输出格式</h4><blockquote>
+<p>油桶的数量 n</p>
+</blockquote>
+<h4 id="输入样例-10"><a href="#输入样例-10" class="headerlink" title="输入样例"></a>输入样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">100000 70000</span><br></pre></td></tr></table></figure>
+
+<h4 id="输出样例-10"><a href="#输出样例-10" class="headerlink" title="输出样例"></a>输出样例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4550035000</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>提示：本题要使用 long long int 类型。</p>
+<h2 id="题解-16"><a href="#题解-16" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-16"><a href="#分析-16" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-16"><a href="#代码-16" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> <span class="type">int</span> a, b;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld %lld&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">    sum=(a+a-b+<span class="number">1</span>)*b/<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目：10-后天"><a href="#题目：10-后天" class="headerlink" title="题目：10 后天"></a>题目：10 后天</h2><p>如果今天是星期三，后天就是星期五；如果今天是星期六，后天就是星期一。我们用数字1到7对应星期一到星期日。给定某一天，请你输出那天的“后天”是星期几。</p>
+<h3 id="输入格式：-2"><a href="#输入格式：-2" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数<code>D</code>（1 ≤ <code>D</code> ≤ 7），代表星期里的某一天。</p>
+<h3 id="输出格式：-2"><a href="#输出格式：-2" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出<code>D</code>天的后天是星期几。</p>
+<h3 id="输入样例：-2"><a href="#输入样例：-2" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例：-2"><a href="#输出样例：-2" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解-17"><a href="#题解-17" class="headerlink" title="题解"></a>题解</h2><h3 id="分析-17"><a href="#分析-17" class="headerlink" title="分析"></a>分析</h3><h3 id="代码-17"><a href="#代码-17" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> a,b,c;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(a+<span class="number">2</span>&gt;<span class="number">7</span>)</span><br><span class="line">&#123;</span><br><span class="line">    b=a+<span class="number">2</span>;</span><br><span class="line">    c=b%<span class="number">7</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,c);</span><br><span class="line">&#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">&#123; </span><br><span class="line">    c=a+<span class="number">2</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">#C语言</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/PTA/">#PTA</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/07/15/OOP%E4%B8%8A%E5%8D%8A%E9%83%A8%E5%88%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">OOP上半部分</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">陶然</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E9%9B%861"><span class="nav-number">1.</span> <span class="nav-text">题目集1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A1-%E6%88%8D%E8%BE%B9%E8%8B%B1%E9%9B%84"><span class="nav-number">1.1.</span> <span class="nav-text">题目：1 戍边英雄</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-number">1.2.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A2-Welcome-to-You"><span class="nav-number">1.3.</span> <span class="nav-text">题目：2 Welcome to You!</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">输出格式:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="nav-number">1.4.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A3-%E8%BE%93%E5%87%BA%E5%80%92%E4%B8%89%E8%A7%92%E5%9B%BE%E6%A1%88"><span class="nav-number">1.5.</span> <span class="nav-text">题目：3 输出倒三角图案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="nav-number">1.5.2.</span> <span class="nav-text">输出格式:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="nav-number">1.6.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-2"><span class="nav-number">1.6.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">1.6.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A4-%E6%89%93%E5%8D%B0%E8%8F%9C%E5%8D%95"><span class="nav-number">1.7.</span> <span class="nav-text">题目：4 打印菜单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="nav-number">1.7.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="nav-number">1.7.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.7.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">1.7.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="nav-number">1.8.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-3"><span class="nav-number">1.8.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">1.8.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A5-%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5"><span class="nav-number">1.9.</span> <span class="nav-text">题目：5 混合类型数据格式化输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.9.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.9.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">1.9.3.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">1.9.4.</span> <span class="nav-text">输出样例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="nav-number">1.10.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-4"><span class="nav-number">1.10.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-number">1.10.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A6-%E8%AE%A1%E7%AE%97%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6"><span class="nav-number">1.11.</span> <span class="nav-text">题目：6 计算摄氏温度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-3"><span class="nav-number">1.11.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-3"><span class="nav-number">1.11.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-2"><span class="nav-number">1.11.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-2"><span class="nav-number">1.11.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="nav-number">1.12.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-5"><span class="nav-number">1.12.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-5"><span class="nav-number">1.12.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A7-%E6%95%B4%E6%95%B0%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97"><span class="nav-number">1.13.</span> <span class="nav-text">题目：7 整数算术运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-4"><span class="nav-number">1.13.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-4"><span class="nav-number">1.13.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-3"><span class="nav-number">1.13.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-3"><span class="nav-number">1.13.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-6"><span class="nav-number">1.14.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-6"><span class="nav-number">1.14.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-6"><span class="nav-number">1.14.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A8-%E8%AE%A1%E7%AE%97%E7%81%AB%E8%BD%A6%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4"><span class="nav-number">1.15.</span> <span class="nav-text">题目：8 计算火车运行时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="nav-number">1.15.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="nav-number">1.15.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A-1"><span class="nav-number">1.15.3.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A-1"><span class="nav-number">1.15.4.</span> <span class="nav-text">输出样例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-7"><span class="nav-number">1.16.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-7"><span class="nav-number">1.16.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-7"><span class="nav-number">1.16.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E9%9B%862"><span class="nav-number">2.</span> <span class="nav-text">题目集2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-1-%E5%AF%86%E7%A0%81%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">题目:1 密码转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-5"><span class="nav-number">2.1.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-5"><span class="nav-number">2.1.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-4"><span class="nav-number">2.1.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-4"><span class="nav-number">2.1.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-8"><span class="nav-number">2.2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-8"><span class="nav-number">2.2.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-8"><span class="nav-number">2.2.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A2-%E6%B1%82%E5%9C%86%E9%94%A5%E4%BD%93%E4%BD%93%E7%A7%AF"><span class="nav-number">2.3.</span> <span class="nav-text">题目：2 求圆锥体体积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-6"><span class="nav-number">2.3.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-6"><span class="nav-number">2.3.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-5"><span class="nav-number">2.3.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-5"><span class="nav-number">2.3.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-9"><span class="nav-number">2.4.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-9"><span class="nav-number">2.4.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-9"><span class="nav-number">2.4.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A3-%E7%BB%84%E5%90%88%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%95%B4%E6%95%B0"><span class="nav-number">2.5.</span> <span class="nav-text">题目：3 组合一个新的整数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-7"><span class="nav-number">2.5.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-7"><span class="nav-number">2.5.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-6"><span class="nav-number">2.5.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-6"><span class="nav-number">2.5.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-10"><span class="nav-number">2.6.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-10"><span class="nav-number">2.6.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-10"><span class="nav-number">2.6.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A4-%E7%A8%8B%E5%BA%8F%E5%91%98"><span class="nav-number">2.7.</span> <span class="nav-text">题目：4 程序员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-8"><span class="nav-number">2.7.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-8"><span class="nav-number">2.7.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-7"><span class="nav-number">2.7.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-7"><span class="nav-number">2.7.4.</span> <span class="nav-text">输出样例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-11"><span class="nav-number">2.8.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-11"><span class="nav-number">2.8.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-11"><span class="nav-number">2.8.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A5-%E8%AE%A1%E7%AE%97%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0"><span class="nav-number">2.9.</span> <span class="nav-text">题目：5 计算分段函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-9"><span class="nav-number">2.9.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-9"><span class="nav-number">2.9.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1"><span class="nav-number">2.9.3.</span> <span class="nav-text">输入样例1:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1"><span class="nav-number">2.9.4.</span> <span class="nav-text">输出样例1:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2"><span class="nav-number">2.9.5.</span> <span class="nav-text">输入样例2:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2"><span class="nav-number">2.9.6.</span> <span class="nav-text">输出样例2:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-12"><span class="nav-number">2.10.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-12"><span class="nav-number">2.10.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-12"><span class="nav-number">2.10.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A6-ASCII%E7%A0%81%E5%AE%9E%E6%88%98"><span class="nav-number">2.11.</span> <span class="nav-text">题目：6 ASCII码实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-10"><span class="nav-number">2.11.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-10"><span class="nav-number">2.11.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-8"><span class="nav-number">2.11.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-8"><span class="nav-number">2.11.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-13"><span class="nav-number">2.12.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-13"><span class="nav-number">2.12.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-13"><span class="nav-number">2.12.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A7-%E6%B1%82%E6%95%B4%E6%95%B0%E5%9D%87%E5%80%BC"><span class="nav-number">2.13.</span> <span class="nav-text">题目：7 求整数均值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-11"><span class="nav-number">2.13.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-11"><span class="nav-number">2.13.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-9"><span class="nav-number">2.13.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-9"><span class="nav-number">2.13.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-14"><span class="nav-number">2.14.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-14"><span class="nav-number">2.14.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-14"><span class="nav-number">2.14.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A8-%E5%9D%9A%E6%8C%81%E7%9A%84%E5%8A%9B%E9%87%8F"><span class="nav-number">2.15.</span> <span class="nav-text">题目：8  坚持的力量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-12"><span class="nav-number">2.15.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-12"><span class="nav-number">2.15.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1-1"><span class="nav-number">2.15.3.</span> <span class="nav-text">输入样例1:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1-1"><span class="nav-number">2.15.4.</span> <span class="nav-text">输出样例1:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2-1"><span class="nav-number">2.15.5.</span> <span class="nav-text">输入样例2:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2-1"><span class="nav-number">2.15.6.</span> <span class="nav-text">输出样例2:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-15"><span class="nav-number">2.16.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-15"><span class="nav-number">2.16.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-15"><span class="nav-number">2.16.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A9-%E6%B2%B9%E6%A1%B6%E6%95%B0"><span class="nav-number">2.17.</span> <span class="nav-text">题目：9 油桶数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-13"><span class="nav-number">2.17.0.1.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-13"><span class="nav-number">2.17.0.2.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-10"><span class="nav-number">2.17.0.3.</span> <span class="nav-text">输入样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-10"><span class="nav-number">2.17.0.4.</span> <span class="nav-text">输出样例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-16"><span class="nav-number">2.18.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-16"><span class="nav-number">2.18.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-16"><span class="nav-number">2.18.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9A10-%E5%90%8E%E5%A4%A9"><span class="nav-number">2.19.</span> <span class="nav-text">题目：10 后天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-2"><span class="nav-number">2.19.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-2"><span class="nav-number">2.19.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A-2"><span class="nav-number">2.19.3.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A-2"><span class="nav-number">2.19.4.</span> <span class="nav-text">输出样例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-17"><span class="nav-number">2.20.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90-17"><span class="nav-number">2.20.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-17"><span class="nav-number">2.20.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
