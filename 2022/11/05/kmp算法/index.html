@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="陶然">
+    
+    <title>
+        
+            kmp算法 |
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                My blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">kmp算法</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">陶然</span>
+                        
+                            <span class="author-label">挥兹一觞，陶然自乐</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-11-05 15:09:30</span>
+        <span class="mobile">2022-11-05 15:09</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p> 字符串匹配算法中的 kmp 算法</p>
+ <span id="more"></span>
+
+<h1 id="KMP-算法"><a href="#KMP-算法" class="headerlink" title="KMP 算法"></a>KMP 算法</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于字符串模式匹配，BF方法我们都知道，但是它的运行时间非常的慢，所以就有了<strong>KMP算法</strong>，<strong>KMP算法</strong>其实算是牺牲了空间来换取更快的时间。</p>
+<p>使用 <code>pat</code> 表示模式串，长度为 <code>m</code> ， <code>txt</code> 表示主串，长度为 <code>n</code> </p>
+<p>在BF算法中：使用了指针 <code>i</code> 和 <code>j</code> 来之时主串和模式串的位置，而且每次匹配失败的时候，主串的 <code>i</code> 就会就会<strong>回溯</strong>。</p>
+<p>KMP 的核心要点就是指针 <code>i</code> 不会像BF算法那样回溯，而是移动 <code>j</code> 的位置，所以需要一个 <code>next[j]</code> 数组来储存每一个 <code>j</code> 所对应的下一个 <code>j</code> </p>
+<h2 id="next数组"><a href="#next数组" class="headerlink" title="next数组"></a>next数组</h2><blockquote>
+<p>前缀字符串指的是位于模式串起始位置的字符串，例如模式串 “ABCD”，则 “A”、”AB”、”ABC” 以及 “ABCD” 都属于前缀字符串；后缀字符串指的是位于串结尾处的字符串，还拿模式串 “ABCD” 来说，”D”、”CD”、”BCD” 和 “ABCD” 为后缀字符串。</p>
+</blockquote>
+<p>现在有串 P&#x3D;abaabca ，各个子串的最大公共前后缀长度如下表所示</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/516ef61fa7a339c7b23484cf199895b0.png"></p>
+<p>这个时候串 p 的每一个字符就跟最大字符串产生了一一对应关系</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/aec48c41d0cff5558ee8edbd977d131f.png"></p>
+<p>这个表的含义是在<strong>当前字符作为最后一个字符时，当前子串所拥有的公共前后缀最长长度</strong></p>
+<p>现在引出 next 数组，next 数组的值是<strong>当前字符的前一个字符作为最后一个字符时，当前字串所拥有的公共前后缀最大长度</strong>。也就是把上面表的每一个都向右移动一位，也就是下表：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c8a3c282f6c6943734d0eedc39a79f28.png"></p>
+<ul>
+<li><p>next 数组的使用</p>
+<p>当主串与模式串不匹配的时候，将 <code>j = next[j]</code> 这就相当于将模式串向右移动了 <code>j - next[j]</code> 位</p>
+</li>
+</ul>
+<h2 id="递推求解-next-数组"><a href="#递推求解-next-数组" class="headerlink" title="递推求解 next 数组"></a>递推求解 next 数组</h2><p>对于 next 数组，<code>next[0] = -1, next[1] = 0</code> 这是已知的，所以变成了当 j&gt;1 时，如果我们已知了<code>next[j]</code>，求<code>next[j+1]</code></p>
+<ul>
+<li>第一种情况：<code>pat[j]</code> 刚好是最大后缀的最后一个字符：<code>pat[i] = pat[k]</code></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/eb975f665d410bbffeaa8962ff905c8a.png"></p>
+<p>这个时候对于下一个字符来说，它的 next 数组的值刚好是前一个 next 值加一：<code>next[j + 1] = next[j] + 1</code></p>
+<ul>
+<li>第二种情况：<code>pat[j]</code> 不是最大后缀(这个后缀是第一种情况的那种后缀)的最后一个字符：<code>pat[i] != pat[k]</code></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/61f5acd511e0405fb510e7fab0259713.png"></p>
+<p>这个时候虽然不等了，但是并不代表 <code>pat[j]</code> 不能作为最大后缀的最大字符，比如取前缀的 “AB” 依然可以配对</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ad8379951e872d00f2c4bc6414e9c196.png"><br>但是如何找呢？</p>
+<p><code>pat[j]</code> 前面有一段已匹配的字符串 k ，他们的后缀相同，对于 <code>pat[k]</code> ，它前面有一段已匹配的字符串 L，它们后缀相同，这就表明了 L 的后缀与 K 的后缀是相同的，这样的话如果 <code>pat[next[k]] = pat[j</code>] 的话不就匹配成功了。所以就有了 <code>k = next[k]</code></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/75dae0ac65dafa626857ebe90f4714d7.png"></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">char</span>* pat,<span class="type">int</span> *next)</span> &#123;</span><br><span class="line">	<span class="type">int</span> k = <span class="number">-1</span>, j = <span class="number">0</span>;</span><br><span class="line">	next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (j &lt; <span class="built_in">strlen</span>(pat)<span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (k == <span class="number">-1</span> || pat[k]==pat[j]) &#123;</span><br><span class="line">			k++;</span><br><span class="line">			j++;</span><br><span class="line">			next[j] = k;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			k = next[k];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为 <code>next[0]</code> 已经赋值过了，且在循环里面 j 是先加在使用的，所以 while 是 <code>j &lt; strlen(pat)-1</code></p>
+<h1 id="kmp代码"><a href="#kmp代码" class="headerlink" title="kmp代码"></a>kmp代码</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">char</span>* pat,<span class="type">int</span> *next)</span> &#123;</span><br><span class="line">	<span class="type">int</span> k = <span class="number">-1</span>, j = <span class="number">0</span>;</span><br><span class="line">	next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (j &lt; <span class="built_in">strlen</span>(pat)<span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (k == <span class="number">-1</span> || pat[k]==pat[j]) &#123;</span><br><span class="line">			k++;</span><br><span class="line">			j++;</span><br><span class="line">			next[j] = k;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			k = next[k];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">kmp</span><span class="params">(<span class="type">char</span>* txt, <span class="type">char</span>* pat)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> (txt == <span class="literal">NULL</span> || pat == <span class="literal">NULL</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> p = (<span class="type">int</span>)<span class="built_in">strlen</span>(txt);</span><br><span class="line">	<span class="type">int</span> q = (<span class="type">int</span>)<span class="built_in">strlen</span>(pat);</span><br><span class="line">	<span class="type">int</span>* next = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="built_in">strlen</span>(pat));</span><br><span class="line">	<span class="keyword">if</span> (next == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	getNext(pat, next);</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> ((i &lt; p) &amp;&amp; (j &lt; q)) &#123;</span><br><span class="line">		<span class="keyword">if</span> (j == <span class="number">-1</span> || txt[i] == pat[j]) &#123;</span><br><span class="line">			i++;</span><br><span class="line">			j++;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			j = next[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">free</span>(next);</span><br><span class="line">	next = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">if</span> (j == <span class="built_in">strlen</span>(pat)) &#123;</span><br><span class="line">		<span class="keyword">return</span> i - j;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码里面循环的判断不能直接使用 <code>strlen</code> 函数，因为 <code>strlen</code> 函数返回的是 <code>size_t</code> 类型；</p>
+<blockquote>
+<p>参考<br><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/yyzsir/article/details/89462339" >KMP算法详解_yyzsir的博客-CSDN博客_kmp算法<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：kmp算法</li>
+        <li>Post author：陶然</li>
+        <li>Create time：2022-11-05 15:09:30</li>
+        <li>
+            Post link：https://18sy.github.io/2022/11/05/kmp算法/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">#C语言</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/11/05/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E4%B8%8E%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">双向链表与循环链表</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">陶然</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#KMP-%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">KMP 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E6%95%B0%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">next数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E6%8E%A8%E6%B1%82%E8%A7%A3-next-%E6%95%B0%E7%BB%84"><span class="nav-number">1.3.</span> <span class="nav-text">递推求解 next 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.3.1.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#kmp%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">kmp代码</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

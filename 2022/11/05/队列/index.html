@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="陶然">
+    
+    <title>
+        
+            队列 |
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/logo.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                My blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">队列</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">陶然</span>
+                        
+                            <span class="author-label">挥兹一觞，陶然自乐</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-11-05 11:45:12</span>
+        <span class="mobile">2022-11-05 11:45</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>队列</p>
+<span id="more"></span>
+
+<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>对于队列就像我们在超市、食堂需要排队一样，我们总是排成一列，先到的人就排在前面，后来的人就排在后面，越前面的人越先完成任务，这就是队列，队列有队头和队尾：</p>
+<p><img src="https://s2.loli.net/2022/07/25/xBuZckTNtR54AEq.png" alt="image-20220725103600318"></p>
+<p>秉承先来后到的原则，<strong>队列中的元素只能从队尾进入，只能从队首出去</strong>，也就是说，入队顺序为1、2、3、4，那么出队顺序也一定是1、2、3、4，所以<strong>队列是一种先进先出（FIFO，First In, First Out）的数据结构。</strong></p>
+<p>想要实现队列也是很简单的，也可以通过两种线性表来实现。</p>
+<h1 id="顺序队列"><a href="#顺序队列" class="headerlink" title="顺序队列"></a>顺序队列</h1><p>先使用顺序表如何实现队列，假设一开始的时候队列中有0个元素，队首和队尾一般都初始都是-1这个位置：</p>
+<p><img src="https://s2.loli.net/2022/07/25/OKVFSEfQIkDjzNu.png" alt="image-20220725110033373"></p>
+<p>此时有新的元素入队了，队尾向后移动一格（+1），然后在所指向位置插入新的元素：</p>
+<p><img src="https://s2.loli.net/2022/07/25/Pd6ZRUxKIhzVF9E.png" alt="image-20220725110155810"></p>
+<p>之后都是同样的方式进行插入，队尾会一直向后移动：</p>
+<p><img src="https://s2.loli.net/2022/07/25/8w3Mlroz25EeIcL.png" alt="image-20220725110910388"></p>
+<p>现在想要执行出队操作了，那么需要将队首向后移动一格，然后删除队首指向的元素：</p>
+<p><img src="https://s2.loli.net/2022/07/25/LaZsrtwi8AkW9gh.png" alt="image-20220725111826355"></p>
+<p>看起来设计的还挺不错的，不过这样有一个问题，这个队列是一次性的，如果队列经过反复出队入队操作，那么最后指针会直接指向数组的最后，如果我们延长数组的话，也不是一个办法，不可能无限制的延伸下去吧？所以一般我们采用循环队列的形式，来实现重复使用一个数组（不过就<strong>没办法扩容了，大小是固定的</strong>）</p>
+<p><img src="https://s2.loli.net/2022/07/25/MNaqpZRgkHcTlCU.png" alt="image-20220725112931675"></p>
+<p>对于循环队列需要在移动队首队尾指针时，考虑循环的问题，也就是说<strong>如果到达了数组尽头，那么就直接从数组的前面重新开始计算</strong>，这样就相当于逻辑上都循环了，队首和队尾指针在一开始的时候都指向同一个位置，每入队一个新的元素，依然是先让队尾后移一位，在所指向位置插入元素，出队同理。</p>
+<h2 id="如何判满"><a href="#如何判满" class="headerlink" title="如何判满"></a>如何判满</h2><p><img src="https://s2.loli.net/2022/07/25/eptxXASywr3b4c9.png" alt="image-20220725113824587"></p>
+<p>由于队首指针和队尾指针重合时表示队列为空，所以我们只能舍弃一个存储单元，当<strong>队尾加一等于队首的时候，表示队列已满</strong>。</p>
+<p>理论结束，开始编程：</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXCAPACITY 10;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> elemType;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> &#123;</span></span><br><span class="line">	elemType* <span class="built_in">array</span>;</span><br><span class="line">	<span class="type">int</span> font; <span class="comment">// font 和 rear 表示数组下标，只不过起到了指针的作用</span></span><br><span class="line">	<span class="type">int</span> rear;</span><br><span class="line">	<span class="type">int</span> capacity;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Queue</span>* <span class="title">ArrayQueue</span>;</span></span><br></pre></td></tr></table></figure>
+
+<p>接着我们来对其进行初始化：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">_Bool</span> <span class="title function_">initQueue</span><span class="params">(ArrayQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	<span class="built_in">queue</span>-&gt;capacity = MAXCAPACITY;</span><br><span class="line">	<span class="built_in">queue</span>-&gt;<span class="built_in">array</span> = (elemType*) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(elemType) * <span class="built_in">queue</span>-&gt;capacity);</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">queue</span>-&gt;<span class="built_in">array</span> == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">queue</span>-&gt;font = <span class="built_in">queue</span>-&gt;rear = <span class="number">0</span>; <span class="comment">//默认情况下队首和队尾都指向0的位置</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">	initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="入队操作"><a href="#入队操作" class="headerlink" title="入队操作"></a>入队操作</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">_Bool</span> <span class="title function_">offerQueue</span><span class="params">(ArrayQueue <span class="built_in">queue</span>, elemType element)</span> &#123;</span><br><span class="line">	<span class="comment">// 首先判断队列是否已满，已满的话队尾指针的写一个就是队首指针</span></span><br><span class="line">	<span class="keyword">if</span> ((<span class="built_in">queue</span>-&gt;rear + <span class="number">1</span>)%<span class="built_in">queue</span>-&gt;capacity == <span class="built_in">queue</span>-&gt;font) &#123; </span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">queue</span>-&gt;rear = (<span class="built_in">queue</span>-&gt;rear + <span class="number">1</span>) % <span class="built_in">queue</span>-&gt;capacity; <span class="comment">//队尾先向前移动一位，注意取余计算才能实现循环</span></span><br><span class="line">	<span class="built_in">queue</span>-&gt;<span class="built_in">array</span>[<span class="built_in">queue</span>-&gt;rear] = element; <span class="comment">// 插入新元素</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们来测试一下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">printQueue</span><span class="params">(ArrayQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;&lt;&lt;&lt; &quot;</span>);</span><br><span class="line">	<span class="type">int</span> i = <span class="built_in">queue</span>-&gt;font;   <span class="comment">//遍历队列需要从队首开始</span></span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		i = (i + <span class="number">1</span>) % <span class="built_in">queue</span>-&gt;capacity;   <span class="comment">//先向后循环移动</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, <span class="built_in">queue</span>-&gt;<span class="built_in">array</span>[i]);  <span class="comment">//然后打印当前位置上的元素</span></span><br><span class="line">	&#125; <span class="keyword">while</span> (i != <span class="built_in">queue</span>-&gt;rear);   <span class="comment">//当到达队尾时，结束</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;&gt;&gt;&gt;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">	initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; <span class="number">12</span>; i++) &#123;</span><br><span class="line">		offerQueue(&amp;<span class="built_in">queue</span>, i * <span class="number">10</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	printQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后结果如下：</p>
+<p><img src="https://picgo-1314080015.cos.ap-nanjing.myqcloud.com/PIctures/202210152236482.png"></p>
+<h2 id="出队操作"><a href="#出队操作" class="headerlink" title="出队操作"></a>出队操作</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">_Bool</span> <span class="title function_">isEmpty</span><span class="params">(ArrayQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">queue</span>-&gt;rear == <span class="built_in">queue</span>-&gt;font; <span class="comment">// 如果font = rear 则返回1，否则返回0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">elemType <span class="title function_">pollQueue</span><span class="params">(ArrayQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	<span class="built_in">queue</span>-&gt;font = (<span class="built_in">queue</span>-&gt;font + <span class="number">1</span>) % <span class="built_in">queue</span>-&gt;capacity;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">queue</span>-&gt;<span class="built_in">array</span>[<span class="built_in">queue</span>-&gt;font];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们来测试一下吧：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">    initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">        offerQueue(&amp;<span class="built_in">queue</span>, i * <span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    printQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">    <span class="keyword">while</span> (!isEmpty(&amp;<span class="built_in">queue</span>)) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, pollQueue(&amp;<span class="built_in">queue</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们来看看结果：</p>
+<p><img src="https://picgo-1314080015.cos.ap-nanjing.myqcloud.com/PIctures/202210152237593.png"></p>
+<p>可以看到，队列是先进先出的，以什么顺序放入队列中，那么出来的就是是什么顺序。</p>
+<p>同样的，队列也可以使用链表来实现，并且使用链表的话就不需、要关心容量之类的问题了，会更加灵活</p>
+<h1 id="链式队列"><a href="#链式队列" class="headerlink" title="链式队列"></a>链式队列</h1><p><img src="https://s2.loli.net/2022/07/25/lwGgHXqAV5z2KNk.png" alt="image-20220725145214955"></p>
+<p>队列需要同时保存队首和队尾两个指针，因为是单链表，所以队首需要存放指向头结点的指针，因为需要的是前驱结点，而队尾则直接是指向尾结点的指针即可，后面只需要直接在后面拼接就行。</p>
+<p>当有新的元素入队时，只需要连接队尾就行了，同时队尾指针也要后移一位：</p>
+<p><img src="https://s2.loli.net/2022/07/25/ufmFEwrS9xVKoIZ.png" alt="image-20220725145608827"></p>
+<p>出队时，只需要移除队首指向的下一个元素即可：</p>
+<p><img src="https://s2.loli.net/2022/07/25/geJRFwHKhGT69XD.png" alt="image-20220725145707707"></p>
+<p>实践开始：</p>
+<h2 id="初始化-1"><a href="#初始化-1" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> elemType;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> &#123;</span></span><br><span class="line">	elemType element;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">Node</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> &#123;</span></span><br><span class="line">	Node front; <span class="comment">// front 作为头节点</span></span><br><span class="line">	Node rear; <span class="comment">// rear 作为尾节点</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Queue</span>* <span class="title">LinkQueue</span>;</span></span><br></pre></td></tr></table></figure>
+
+<p>接着是初始化，初始化的时候，需要把头结点先创建出来：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">initQueue</span><span class="params">(LinkQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	Node node = (Node) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> LNode));</span><br><span class="line">	<span class="keyword">if</span> (node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">queue</span>-&gt;front = <span class="built_in">queue</span>-&gt;rear = node; <span class="comment">//一开始两个指针都是指向头结点的，表示队列为空</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">	initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="入队操作-1"><a href="#入队操作-1" class="headerlink" title="入队操作"></a>入队操作</h2><p>入队直接在后面插入新的结点就行了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">offerQueue</span><span class="params">(LinkQueue <span class="built_in">queue</span>,elemType element)</span> &#123;</span><br><span class="line">	Node node = (Node) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> LNode));</span><br><span class="line">	<span class="keyword">if</span> (node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	node-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	node-&gt;element = element; </span><br><span class="line">	<span class="built_in">queue</span>-&gt;rear-&gt;next = node; <span class="comment">// 首先连接新节点</span></span><br><span class="line">	<span class="built_in">queue</span>-&gt;rear = node; <span class="comment">// 尾节点后移一位</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试一下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">printQueue</span><span class="params">(LinkQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;&lt;&lt;&lt; &quot;</span>);</span><br><span class="line">	Node node = <span class="built_in">queue</span>-&gt;front-&gt;next; </span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, node-&gt;element);</span><br><span class="line">		<span class="keyword">if</span> (node == <span class="built_in">queue</span>-&gt;rear) &#123; <span class="comment">// 每次打印完判断是否到达队尾</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			node = node-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;&lt;&lt;&lt;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">	initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">		offerQueue(&amp;<span class="built_in">queue</span>, i * <span class="number">10</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	printQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试结果如下：</p>
+<p><img src="https://picgo-1314080015.cos.ap-nanjing.myqcloud.com/PIctures/202210161645338.png"></p>
+<hr>
+<h2 id="出队操作-1"><a href="#出队操作-1" class="headerlink" title="出队操作"></a>出队操作</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">elemType <span class="title function_">pollQueue</span><span class="params">(LinkQueue <span class="built_in">queue</span>)</span> &#123;</span><br><span class="line">	elemType element = <span class="built_in">queue</span>-&gt;front-&gt;next-&gt;element;</span><br><span class="line">	Node temp = <span class="built_in">queue</span>-&gt;front-&gt;next; <span class="comment">// 用来储存要删除的节点</span></span><br><span class="line">	<span class="built_in">queue</span>-&gt;front-&gt;next = <span class="built_in">queue</span>-&gt;front-&gt;next-&gt;next; <span class="comment">// 头节点指向下一个节点</span></span><br><span class="line">	<span class="keyword">if</span> (temp == <span class="built_in">queue</span>-&gt;rear) &#123; <span class="comment">// 判断出队元素是不是最后一个</span></span><br><span class="line">		<span class="built_in">queue</span>-&gt;rear = <span class="built_in">queue</span>-&gt;front; <span class="comment">// 是的话把尾指针移到头指针处</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">free</span>(temp);</span><br><span class="line">	temp = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> element;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，我们就编写好了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Queue</span> <span class="title">queue</span>;</span></span><br><span class="line">	initQueue(&amp;<span class="built_in">queue</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">		offerQueue(&amp;<span class="built_in">queue</span>, i * <span class="number">10</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!isEmpty(&amp;<span class="built_in">queue</span>)) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, pollQueue(&amp;<span class="built_in">queue</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试结果如下：</p>
+<p><img src="https://picgo-1314080015.cos.ap-nanjing.myqcloud.com/PIctures/202210161649383.png"></p>
+<hr>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：队列</li>
+        <li>Post author：陶然</li>
+        <li>Create time：2022-11-05 11:45:12</li>
+        <li>
+            Post link：https://18sy.github.io/2022/11/05/队列/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/C%E8%AF%AD%E8%A8%80/">#C语言</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/11/05/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E4%B8%8E%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">双向链表与循环链表</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/11/05/%E6%A0%88/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">栈</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">陶然</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">队列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E9%98%9F%E5%88%97"><span class="nav-number">2.</span> <span class="nav-text">顺序队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%BB%A1"><span class="nav-number">2.1.</span> <span class="nav-text">如何判满</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A5%E9%98%9F%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text">入队操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BA%E9%98%9F%E6%93%8D%E4%BD%9C"><span class="nav-number">2.4.</span> <span class="nav-text">出队操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">链式队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-1"><span class="nav-number">3.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A5%E9%98%9F%E6%93%8D%E4%BD%9C-1"><span class="nav-number">3.2.</span> <span class="nav-text">入队操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BA%E9%98%9F%E6%93%8D%E4%BD%9C-1"><span class="nav-number">3.3.</span> <span class="nav-text">出队操作</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
