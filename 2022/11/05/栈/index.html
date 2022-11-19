@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.png","avatar":"/images/avatar.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":false,"custom_label_list":["挥兹一觞，陶然自乐"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.png","avatar":"/images/avatar.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":false,"custom_label_list":["挥兹一觞，陶然自乐"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
   </script>
@@ -233,26 +233,11 @@
                 <p>栈</p>
 <span id="more"></span>
 
-<h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picgo-1314080015.cos.ap-nanjing.myqcloud.com/PIctures/202210101721103.png"
-                     
-                ></p>
+<h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><p><img src="https://picgo-1314080015.cos.ap-nanjing.myqcloud.com/PIctures/202210101721103.png"></p>
 <p>栈（也叫堆栈，Stack）是一种特殊的线性表，它只能在在表尾进行插入和删除操作，就像下面这样：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/D3heysaM9EpAgS4.png"
-                      alt="image-20220724210955622"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/D3heysaM9EpAgS4.png" alt="image-20220724210955622"></p>
 <p>只能在一端进行插入和删除，依次插入1、2、3、4这四个元素后，连续进行四次删除操作，删除的顺序刚好相反：4、3、2、1，所以一般竖着看：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/2NxUpCIRLoZt9Ky.png"
-                      alt="image-20220724211442421"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/2NxUpCIRLoZt9Ky.png" alt="image-20220724211442421"></p>
 <p>底部称为栈底，顶部称为栈顶，所有的操作只能在栈顶进行，也就是说，被压在下方的元素，只能等待其上方的元素出栈之后才能取出，就像我们往箱子里里面放的书一样，因为只有一个口取出里面的物品，所以被压在下面的书只能等上面的书被拿出来之后才能取出，这就是栈的思想，它是一 先进后出的数据结构（FILO，First In, Last Out）</p>
 <p>实现栈也是非常简单的，可以基于前面的顺序表或是链表，</p>
 <ul>
@@ -275,12 +260,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">printStack</span><span class="params">(ArrayStack <span class="built_in">stack</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;| &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">stack</span>-&gt;top + <span class="number">1</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d, &quot;</span>, <span class="built_in">stack</span>-&gt;<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span> <span class="title">stack</span>;</span></span><br><span class="line">    initStack(&amp;<span class="built_in">stack</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i) &#123;</span><br><span class="line">        pushStack(&amp;<span class="built_in">stack</span>, i*<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    printStack(&amp;<span class="built_in">stack</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>测试结果也是正确的：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/cDwAgi8FnyQBpRT.png"
-                      alt="image-20220724215755986"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/cDwAgi8FnyQBpRT.png" alt="image-20220724215755986"></p>
 <p>可以看到，从栈底到栈顶一次是0、100、200，不过现在的<code>push</code>操作还不够完美，因为栈有可能塞满，所以要进行扩容处理：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">_Bool</span> <span class="title function_">pushStack</span><span class="params">(ArrayStack <span class="built_in">stack</span>, elemType element)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">stack</span>-&gt;top + <span class="number">1</span> == <span class="built_in">stack</span>-&gt;capacity) &#123; <span class="comment">//栈顶+1如果等于容量的话，那么说明已经塞满了</span></span><br><span class="line">		<span class="type">int</span> newCapacity = <span class="built_in">stack</span>-&gt;capacity + INITCAPACITY;</span><br><span class="line">		elemType* newArray = <span class="built_in">realloc</span>(<span class="built_in">stack</span>-&gt;<span class="built_in">array</span>, <span class="keyword">sizeof</span>(elemType) * newCapacity);</span><br><span class="line">		<span class="keyword">if</span> (newArray == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">stack</span>-&gt;<span class="built_in">array</span> = newArray;</span><br><span class="line">		<span class="built_in">stack</span>-&gt;capacity = newCapacity;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">stack</span>-&gt;<span class="built_in">array</span>[<span class="built_in">stack</span>-&gt;top + <span class="number">1</span>] = element;   <span class="comment">//直接设定栈顶元素</span></span><br><span class="line">	<span class="built_in">stack</span>-&gt;top++;   <span class="comment">//栈顶top变量记得自增</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -291,38 +271,18 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Stack</span> <span class="title">stack</span>;</span></span><br><span class="line">    initStack(&amp;<span class="built_in">stack</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i) &#123;</span><br><span class="line">        pushStack(&amp;<span class="built_in">stack</span>, i*<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    printStack(&amp;<span class="built_in">stack</span>);</span><br><span class="line">    <span class="keyword">while</span> (!isEmpty(&amp;<span class="built_in">stack</span>)) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, popStack(&amp;<span class="built_in">stack</span>));   <span class="comment">//将栈中所有元素依次出栈</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>可以看到，出栈顺序和入栈顺序是完全相反的：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/U1SrtmFs3ibGO78.png"
-                      alt="image-20220724221238281"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/U1SrtmFs3ibGO78.png" alt="image-20220724221238281"></p>
 <p>当然使用数组实现栈除了这种可以自己扩容的之外，也有固定大小的栈，当栈已满时，就无法再进行入栈操作了。</p>
 <p>不过有些时候，栈的利用率可能会很低，这个时候可以将一个固定长度的数组共享给两个栈来使用：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/HRveZ8Ed2TrtaC7.png"
-                      alt="image-20220724221917968"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/HRveZ8Ed2TrtaC7.png" alt="image-20220724221917968"></p>
 <p><strong>数组的两头分别作为两个栈的栈底，当两个栈的栈顶指针相遇时（栈顶指针下标之差绝对值为1时），表示栈已满。</strong> 通过这种方式，我们就可以将数组占用的空间更充分地使用，这样的栈我们称为<strong>共享栈</strong>。</p>
 <h1 id="链式栈"><a href="#链式栈" class="headerlink" title="链式栈"></a>链式栈</h1><p>使用链表会更加的方便，可以直接将头结点指向栈顶结点，而栈顶结点连接后续的栈内结点：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/outf2S7D3WzQK8c.png"
-                      alt="image-20220724222836333"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/outf2S7D3WzQK8c.png" alt="image-20220724222836333"></p>
 <p>当有新的元素入栈，只需要在链表头部插入新的结点即可，我们来尝试编写一下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> elemType;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> &#123;</span></span><br><span class="line">	elemType element;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;*Node;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">initStack</span><span class="params">(Node <span class="built_in">list</span>)</span> &#123;</span><br><span class="line">	<span class="built_in">list</span>-&gt;element = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">list</span>-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> <span class="title">stack</span>;</span></span><br><span class="line">	initStack(&amp;<span class="built_in">stack</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="入栈和出栈"><a href="#入栈和出栈" class="headerlink" title="入栈和出栈"></a>入栈和出栈</h2><p>入栈操作：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/GdBj3g5YRFzSsVw.png"
-                      alt="image-20220724223550553"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/GdBj3g5YRFzSsVw.png" alt="image-20220724223550553"></p>
 <p>代码如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">_Bool</span> <span class="title function_">pushStack</span><span class="params">(Node <span class="built_in">list</span>, elemType element)</span> &#123;</span><br><span class="line">	Node node = (Node) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> LNode));</span><br><span class="line">	<span class="keyword">if</span> (node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	node-&gt;element = element;</span><br><span class="line">	node-&gt;next = <span class="built_in">list</span>-&gt;next;</span><br><span class="line">	<span class="built_in">list</span>-&gt;next = node;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -593,8 +553,6 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
 
 
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/lazyload.js"></script>
 
 
 <div class="post-scripts pjax">

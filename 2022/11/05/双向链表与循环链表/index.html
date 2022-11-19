@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.png","avatar":"/images/avatar.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":false,"custom_label_list":["挥兹一觞，陶然自乐"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":"/images/logo.png","avatar":"/images/avatar.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":false,"custom_label_list":["挥兹一觞，陶然自乐"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"center","copyright_info":true},"version":"3.5.2"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
   </script>
@@ -235,12 +235,7 @@
 
 <h1 id="双向链表和循环链表"><a href="#双向链表和循环链表" class="headerlink" title="双向链表和循环链表"></a>双向链表和循环链表</h1><p>对于单链表来说查找前驱结点非常的艰难</p>
 <p>为了解决这种查找前驱结点非常麻烦的问题，可以让结点不仅保存指向后续结点的指针，同时也保存指向前驱结点的指针：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/oeXm6nyW7I9lPMf.png"
-                      alt="image-20220724123947104"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/oeXm6nyW7I9lPMf.png" alt="image-20220724123947104"></p>
 <p>这样我们无论在哪个结点，都能够快速找到对应的前驱结点，就很方便了，这样的链表称为双向链表（双链表）</p>
 <p>首先定义结构体：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> elemType;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> &#123;</span>  </span><br><span class="line">    elemType element;  </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span>  <span class="comment">// 后继节点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">prev</span>;</span>  <span class="comment">// 前驱结点</span></span><br><span class="line">&#125; *Node;</span><br></pre></td></tr></table></figure>
@@ -249,40 +244,15 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">initList</span><span class="params">(Node <span class="built_in">list</span>)</span> &#123;  </span><br><span class="line">    <span class="built_in">list</span>-&gt;prev = <span class="literal">NULL</span>;  </span><br><span class="line">    <span class="built_in">list</span>-&gt;next = <span class="literal">NULL</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="插入节点"><a href="#插入节点" class="headerlink" title="插入节点"></a>插入节点</h1><p><strong>对于插入操作一般都是找到要插入节点的前驱节点，所以插入新的节点的时候一般是先把新节点与后面的节点相连接然后在与前驱节点相连接</strong></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/MYwlVZ2fXB6icPt.png"
-                      alt="image-20220724125739857"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/MYwlVZ2fXB6icPt.png" alt="image-20220724125739857"></p>
 <p>当新的结点插入之后，新的结点的后继结点就是原本在此位置上的结点，所以先将待插入结点的后继指针指向此位置上的结点：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/IDYwp5gdPcSyFQO.png"
-                      alt="image-20220724130010432"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/IDYwp5gdPcSyFQO.png" alt="image-20220724130010432"></p>
 <p>由于是双向链表，所以需要将原本在此位置上的结点的前驱指针指向新的结点：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/5CKQ6LnzxGm4pYd.png"
-                      alt="image-20220724130219180"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/5CKQ6LnzxGm4pYd.png" alt="image-20220724130219180"></p>
 <p>接下来是前驱结点，首先将前驱结点的后继指针修改为新的结点：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/vmEViApU36FonJz.png"
-                      alt="image-20220724130342232"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/vmEViApU36FonJz.png" alt="image-20220724130342232"></p>
 <p> 最后将新的结点的前驱指针指向前驱结点：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/C65IuomOVdAaWZ8.png"
-                      alt="image-20220724130442927"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/C65IuomOVdAaWZ8.png" alt="image-20220724130442927"></p>
 <p>按照思路设计函数：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">insertList</span><span class="params">(Node head, elemType element, <span class="type">int</span> index)</span> &#123;  </span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">1</span>) &#123;  </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; index; ++i) &#123;  </span><br><span class="line">        head = head-&gt;next;  </span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) &#123;  </span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment">// 上面的操作是为了找到要插入节点的前一个节点  </span></span><br><span class="line">    Node node = (Node) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode)); <span class="comment">// 创建新的节点  </span></span><br><span class="line">    <span class="keyword">if</span> (node == <span class="literal">NULL</span>) &#123;  </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    node-&gt;element = element;  </span><br><span class="line">    <span class="comment">// 首先处理后继结点，现在有两种情况，一种是后继结点不存在的情况，还有一种是后继结点存在的情况  </span></span><br><span class="line">    <span class="keyword">if</span> (head-&gt;next == <span class="literal">NULL</span>) &#123; <span class="comment">// 后继节点不存在直接后继节点为NULL  </span></span><br><span class="line">        node-&gt;next = <span class="literal">NULL</span>;  </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">        node-&gt;next = head-&gt;next;  </span><br><span class="line">        head-&gt;next-&gt;prev = node;  </span><br><span class="line">    &#125;  </span><br><span class="line">    head-&gt;next = node; <span class="comment">//接着是前驱结点，直接操作就行  </span></span><br><span class="line">    node-&gt;prev = head;  </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -290,43 +260,18 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;  </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> <span class="title">head</span>;</span>  </span><br><span class="line">    initList(&amp;head);  </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;  </span><br><span class="line">        insertList(&amp;head, i * <span class="number">100</span>, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    Node node = &amp;head;   <span class="comment">//先来正向遍历一次  </span></span><br><span class="line">    <span class="keyword">do</span> &#123;  </span><br><span class="line">        node = node-&gt;next;  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d -&gt; &quot;</span>, node-&gt;element);  </span><br><span class="line">    &#125; <span class="keyword">while</span> (node-&gt;next != <span class="literal">NULL</span>);  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);   <span class="comment">//再来反向遍历一次  </span></span><br><span class="line">    <span class="keyword">do</span> &#123;  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d -&gt; &quot;</span>, node-&gt;element);  </span><br><span class="line">        node = node-&gt;prev;  </span><br><span class="line">    &#125; <span class="keyword">while</span> (node-&gt;prev != <span class="literal">NULL</span>);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>可以看到结果没有问题：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/DZ7zStdGB4EsvaW.png"
-                      alt="image-20220724132205136"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/DZ7zStdGB4EsvaW.png" alt="image-20220724132205136"></p>
 <p>无论是正向遍历还是反向遍历，都可以正常完成，相比单链表的灵活度更大</p>
-<h1 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h1><p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/WgxjXBDAalYFGSH.png"
-                      alt="image-20220724132636580"
-                ></p>
+<h1 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h1><p><img src="https://s2.loli.net/2022/07/24/WgxjXBDAalYFGSH.png" alt="image-20220724132636580"></p>
 <p>只需将前驱结点和后继结点的指向修改即可：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/3aU7zV1N5Mox2Qk.png"
-                      alt="image-20220724132801105"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/3aU7zV1N5Mox2Qk.png" alt="image-20220724132801105"></p>
 <p>接着直接删除对应的结点即可：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/L1zCq26k5BaGOlm.png"
-                      alt="image-20220724132906001"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/L1zCq26k5BaGOlm.png" alt="image-20220724132906001"></p>
 <p>函数实现：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">deleteList</span><span class="params">(Node head, <span class="type">int</span> index)</span> &#123;  </span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">1</span>) &#123;  </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; index; ++i) &#123;  </span><br><span class="line">        head = head-&gt;next;  </span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) &#123;  </span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">if</span> (head-&gt;next == <span class="literal">NULL</span>) &#123; <span class="comment">// 这个表示要删除的节点不存在已经超出了链表  </span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    Node temp = head-&gt;next;  </span><br><span class="line">    <span class="keyword">if</span> (head-&gt;next-&gt;next == <span class="literal">NULL</span>) &#123; <span class="comment">// 要删除的节点为最后一个节点  </span></span><br><span class="line">        head-&gt;next = <span class="literal">NULL</span>;  </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">        head-&gt;next-&gt;next-&gt;prev = head;  </span><br><span class="line">        head-&gt;next = head-&gt;next-&gt;next;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="built_in">free</span>(temp);  </span><br><span class="line">    temp = <span class="literal">NULL</span>;  </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h1><p>循环链表，这种链表实际上和链表是一样的，但是它的最后一个结点，是与头结点相连的，双向链表和单向链表都可以做成这样的环形结构，单链表为例：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://s2.loli.net/2022/07/24/KZl4SJVYQ5cfv7b.png"
-                      alt="image-20220724134153904"
-                ></p>
+<p><img src="https://s2.loli.net/2022/07/24/KZl4SJVYQ5cfv7b.png" alt="image-20220724134153904"></p>
 <p>这种类型的链表实际上与普通链表的唯一区别就在于最后是否连接到头结点，因此循环链表支持从任意一个结点出发都可以到达任何的结点，而普通的链表则只能从头结点出发才能到达任意结点，同样也是为了更灵活而设计的。</p>
 <p><strong>对于循环链表的结束，当节点的next节点指向的是head节点的时候就表示链表结束</strong></p>
 
@@ -579,8 +524,6 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
 
 
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/lazyload.js"></script>
 
 
 <div class="post-scripts pjax">
