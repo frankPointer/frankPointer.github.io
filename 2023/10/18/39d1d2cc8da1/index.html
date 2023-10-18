@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="frankPointer">
+    
+    <title>
+        
+            五子棋判断胜利 |
+        
+        My blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/null">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/fontawesome/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":null,"favicon":null,"avatar":"/images/avatar.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"一个人只有极其努力才能看起来毫不费力","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.7"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":false,"custom_label_list":["挥兹一觞，陶然自乐"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"center","copyright_info":false},"version":"3.5.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+               My blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">五子棋判断胜利</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">frankPointer</span>
+                            
+                                <span class="author-label">挥兹一觞，陶然自乐</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-10-18 16:05:45</span>
+        <span class="mobile">2023-10-18 16:05</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-10-18 16:09:11</span>
+    </span>
+    
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%AE%97%E6%B3%95-java/">算法,java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>539 Words</span>
+        </span>
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                <h1 id="常规"><a href="#常规" class="headerlink" title="常规"></a>常规</h1><p>正常匹配都是使用上下斜着四个方向来匹配胜利</p>
+<h1 id="状态压缩"><a href="#状态压缩" class="headerlink" title="状态压缩"></a>状态压缩</h1><p>将棋盘状态压缩成一串数字来解决问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GomokuGame</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">BOARD_SIZE</span> <span class="operator">=</span> <span class="number">15</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">EMPTY</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">PLAYER_1</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">PLAYER_2</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[][] board;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> currentPlayer;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">GomokuGame</span><span class="params">()</span> &#123;</span><br><span class="line">        board = <span class="keyword">new</span> <span class="title class_">int</span>[BOARD_SIZE][BOARD_SIZE];</span><br><span class="line">        currentPlayer = PLAYER_1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">play</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">isFinished</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!isFinished) &#123;</span><br><span class="line">            count++;</span><br><span class="line">            printBoard();</span><br><span class="line">            System.out.println(<span class="string">&quot;当前玩家: &quot;</span> + currentPlayer);</span><br><span class="line">            System.out.print(<span class="string">&quot;请输入落子的行号（1-&quot;</span> + BOARD_SIZE + <span class="string">&quot;）：&quot;</span>);</span><br><span class="line">            <span class="type">int</span> <span class="variable">row</span> <span class="operator">=</span> scanner.nextInt() - <span class="number">1</span>;</span><br><span class="line">            System.out.print(<span class="string">&quot;请输入落子的列号（1-&quot;</span> + BOARD_SIZE + <span class="string">&quot;）：&quot;</span>);</span><br><span class="line">            <span class="type">int</span> <span class="variable">col</span> <span class="operator">=</span> scanner.nextInt() - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (isValidMove(row, col)) &#123;</span><br><span class="line">                makeMove(row, col);</span><br><span class="line">                <span class="keyword">if</span> (checkWinner(board, currentPlayer)) &#123;</span><br><span class="line">                    printBoard();</span><br><span class="line">                    System.out.println(<span class="string">&quot;玩家 &quot;</span> + currentPlayer + <span class="string">&quot; 获胜！&quot;</span>);</span><br><span class="line">                    isFinished = <span class="literal">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (isBoardFull()) &#123;</span><br><span class="line">                    printBoard();</span><br><span class="line">                    System.out.println(<span class="string">&quot;游戏结束，平局！&quot;</span>);</span><br><span class="line">                    isFinished = <span class="literal">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    currentPlayer = (currentPlayer == PLAYER_1) ? PLAYER_2 : PLAYER_1;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;无效的落子，请重新输入。&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">printBoard</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">row</span> <span class="operator">=</span> <span class="number">0</span>; row &lt; BOARD_SIZE; row++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">col</span> <span class="operator">=</span> <span class="number">0</span>; col &lt; BOARD_SIZE; col++) &#123;</span><br><span class="line">                System.out.print(board[row][col] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">isValidMove</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (row &gt;= <span class="number">0</span> &amp;&amp; row &lt; BOARD_SIZE &amp;&amp; col &gt;= <span class="number">0</span> &amp;&amp; col &lt; BOARD_SIZE &amp;&amp; board[row][col] == EMPTY);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">makeMove</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col)</span> &#123;</span><br><span class="line">        board[row][col] = currentPlayer;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">checkWinner</span><span class="params">(<span class="type">int</span>[][] board, <span class="type">int</span> currentPlayer)</span> &#123;</span><br><span class="line">        <span class="comment">// TODO</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">playMoves</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">row</span> <span class="operator">=</span> <span class="number">0</span>; row &lt; BOARD_SIZE; row++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">col</span> <span class="operator">=</span> <span class="number">0</span>; col &lt; BOARD_SIZE; col++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (board[row][col] == currentPlayer) &#123;</span><br><span class="line">                    playMoves.append(<span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    playMoves.append(<span class="number">0</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">String</span> <span class="variable">movesString</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(playMoves);</span><br><span class="line">        <span class="comment">// 正则表达式匹配胜利情况</span></span><br><span class="line">        String[] winMask = &#123;<span class="string">&quot;.*11111.*&quot;</span>,</span><br><span class="line">                <span class="string">&quot;.*1\\d&#123;15&#125;1\\d&#123;15&#125;1\\d&#123;15&#125;1\\d&#123;15&#125;1.*&quot;</span>,</span><br><span class="line">                <span class="string">&quot;.*1\\d&#123;16&#125;1\\d&#123;16&#125;1\\d&#123;16&#125;1\\d&#123;16&#125;1.*&quot;</span>,</span><br><span class="line">                <span class="string">&quot;.*1\\d&#123;14&#125;1\\d&#123;14&#125;1\\d&#123;14&#125;1\\d&#123;14&#125;1.*&quot;</span></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (String s : winMask) &#123;</span><br><span class="line">            <span class="keyword">if</span> (movesString.matches(s)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">isBoardFull</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">row</span> <span class="operator">=</span> <span class="number">0</span>; row &lt; BOARD_SIZE; row++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">col</span> <span class="operator">=</span> <span class="number">0</span>; col &lt; BOARD_SIZE; col++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (board[row][col] == EMPTY) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">GomokuGame</span> <span class="variable">game</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GomokuGame</span>();</span><br><span class="line">        game.play();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%AE%97%E6%B3%95-java/">#算法,java</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/02/19/a50856a60003/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">傻逼物理突击笔记</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%84"><span class="nav-number">1.</span> <span class="nav-text">常规</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9"><span class="nav-number">2.</span> <span class="nav-text">状态压缩</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2022</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">frankPointer</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/code-block.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.5.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
